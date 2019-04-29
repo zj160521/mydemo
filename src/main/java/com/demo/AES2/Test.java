@@ -18,19 +18,19 @@ public class Test {
 			+ "6UGwBZ5DWBDBMqv5MPdOF5dCQkB2Bbr5yPfURPENypUz+pBFBg41d+BC+rwRiXELwKy7Y9caD/MtJyHydj8OUwIDAQAB";
 
 	public static void main(String[] args) throws IOException {
-//		StringBuffer orgFile = new StringBuffer();
-//		orgFile.append("D:/Rsa/download/tmp/1.txt");
-//		String encryptFile = "D:/Rsa/download/tmp/密文.txt";
-//		String orgFile2 = "D:/Rsa/download/tmp/明文.txt";
-//		
-//		try {
-//			int length1 = AES.encrypt(orgFile,encryptFile,"1234567890123456",4,4);
-//			System.out.println("密文长度："+length1);
-//			int length2 = AES.decrypt("D:/RealtimeData/KJ65N _SSSJ_20180529144200.txt","D:/Rsa/download/tmp/明文12.txt","KoQY7jDOX4IxpGem",4,4);
-//			System.out.println("明文长度："+length2);
-//		} catch (IOException e) {
-//			e.printStackTrace();
-//		}
+		StringBuffer orgFile = new StringBuffer();
+		orgFile.append("D:/Rsa/download/tmp/1.txt");
+		String encryptFile = "D:/Rsa/download/tmp/密文.txt";
+		String orgFile2 = "D:/Rsa/download/tmp/明文.txt";
+
+		try {
+			int length1 = AES.encrypt(orgFile,encryptFile,"1234567890123456",4,4);
+			System.out.println("密文长度："+length1);
+			int length2 = AES.decrypt("D:/RealtimeData/KJ65N _SSSJ_20180529144200.txt","D:/Rsa/download/tmp/明文12.txt","KoQY7jDOX4IxpGem",4,4);
+			System.out.println("明文长度："+length2);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 
 		String AESKey = getRandomString(16);
 		System.out.println(AESKey);

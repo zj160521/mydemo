@@ -26,7 +26,7 @@ public class Lambda {
 //        LambdaInterface1 li1 = () -> {
 //            System.out.println("lambda表达式");
 //        };
-//        LambdaInterface1 li1 = () -> System.out.println("lambda表达式");
-//        li1.test();
+        LambdaInterface1 li1 = () -> System.out.println("lambda表达式");
+        li1.test();
     }
 }
