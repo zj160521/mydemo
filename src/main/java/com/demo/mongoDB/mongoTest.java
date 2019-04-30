@@ -29,16 +29,16 @@ public class mongoTest {
 //        collection.updateOne(Filters.eq("time","2019-02-01"), new Document("$set",new Document("num","100")));
 
         //条件查询，结果排序
-        BasicDBObject cond =  new BasicDBObject();
-        cond.append("time",new BasicDBObject("$gte","2019-02-01"));
-        cond.append("time",new BasicDBObject("$lte","2019-02-02"));
-        FindIterable findIterable1 = collection.find(cond).sort(Sorts.descending("time"));
-        MongoCursor cursor1 = findIterable1.iterator();
-        while (cursor1.hasNext()) {
-            Document document = (Document)cursor.next();
-            for (Map.Entry<String,Object> entry: document.entrySet()) {
-
-            }
-        }
+//        BasicDBObject cond =  new BasicDBObject();
+//        cond.append("time",new BasicDBObject("$gte","2019-02-01"));
+//        cond.append("time",new BasicDBObject("$lte","2019-02-02"));
+//        FindIterable findIterable1 = collection.find(cond).sort(Sorts.descending("time"));
+//        MongoCursor cursor1 = findIterable1.iterator();
+//        while (cursor1.hasNext()) {
+//            Document document = (Document)cursor.next();
+//            for (Map.Entry<String,Object> entry: document.entrySet()) {
+//
+//            }
+//        }
     }
 }
