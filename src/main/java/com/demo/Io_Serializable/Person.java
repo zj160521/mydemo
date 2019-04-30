@@ -1,4 +1,4 @@
-package com.demo.Io___Serializable;
+package com.demo.Io_Serializable;
 
 import java.io.Serializable;
 

@@ -50,11 +50,11 @@ public class ActorTest{
 			inbox.send(countActor, "isWork");
 			Object msg = inbox.receive(Duration.create(1, TimeUnit.SECONDS));
 			if(msg instanceof Terminated) {
-				System.out.println("oo__My countActor is dead");
+				System.out.println("---->>My countActor is dead");
 //				system.shutdown();
 				break;
 			}else{
-				System.out.println("o_o " + msg);
+				System.out.println(">>>>>> " + msg);
 			}
 		}
 		 
