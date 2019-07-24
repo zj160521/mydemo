@@ -6,7 +6,7 @@ package com.demo.generic;
  */
 public class GenericTest {
     public static void main(String[] args) {
-        Generic<TClass> generic =  new Generic<TClass>();
+        Generic<TClass> generic =  new Generic();
         TClass tClass = generic.getL(new TClass());
         System.out.println(tClass.value);
     }
