@@ -6,7 +6,9 @@
         http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
 	
 	<!-- 1  配置对象 -->
-	<bean id="book" class="com.demo.spring.aop.Book"></bean>
+	<bean id="book" class="com.demo.spring.aop.Book">
+		<constructor-arg name="name" value="java book"/>
+	</bean>
 	<bean id="myBook" class="com.demo.spring.aop.MyBook"></bean>
 	
 	<!-- 2 配置aop操作 -->

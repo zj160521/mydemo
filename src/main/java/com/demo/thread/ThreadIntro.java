@@ -3,7 +3,7 @@ package com.demo.thread;
 /**
  * @Description:
  * 1.线程有3种方式实现extends Thread、implements Runable、implements Callable
- * 2.sleep（休眠）和 join（强制执行）状态都可以被interrupt中断
+ * 2.sleep（休眠）和 join（强制执行）、wait状态都可以被interrupt中断
  * @Author: zhouj
  * @Date: 2019/8/1 15:01
  */
