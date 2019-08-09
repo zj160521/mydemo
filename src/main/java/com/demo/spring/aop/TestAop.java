@@ -7,7 +7,8 @@ public class TestAop {
 	
 	@SuppressWarnings("resources")
 	public static void main(String[] args) {
-		ApplicationContext context = 
+		// 获取上下文
+		ApplicationContext context =
 				new ClassPathXmlApplicationContext("bean3.xml");
 		Book book = (Book) context.getBean("book");
 		book.add();
