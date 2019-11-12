@@ -15,9 +15,22 @@
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
     <org.springframework.version>4.3.23.RELEASE</org.springframework.version>
+    <mqttv3.version>1.2.2</mqttv3.version>
   </properties>
 
   <dependencies>
+    <!-- flink-connector-activemq -->
+    <dependency>
+      <groupId>org.apache.bahir</groupId>
+      <artifactId>flink-connector-activemq_2.11</artifactId>
+      <version>1.0</version>
+    </dependency>
+    <!-- mqttv3 -->
+    <dependency>
+      <groupId>org.eclipse.paho</groupId>
+      <artifactId>org.eclipse.paho.client.mqttv3</artifactId>
+      <version>${mqttv3.version}</version>
+    </dependency>
     <!-- mongo -->
     <dependency>
       <groupId>org.springframework.boot</groupId>
