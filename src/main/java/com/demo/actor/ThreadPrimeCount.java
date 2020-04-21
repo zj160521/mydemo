@@ -1,4 +1,4 @@
-package com.demo.Actor;
+package com.demo.actor;
 
 /**
  * 统计100000内的素数个数

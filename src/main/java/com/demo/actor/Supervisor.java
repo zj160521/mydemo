@@ -1,4 +1,4 @@
-package com.demo.Actor;
+package com.demo.actor;
 
 import akka.actor.OneForOneStrategy;
 import akka.actor.Props;
