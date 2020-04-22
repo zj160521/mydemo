@@ -126,7 +126,9 @@ public class A1_BaseSort extends A0_SortCompare{
                             swap(tempHead, tempNext, arr);
                             tempNext = tempHead;
                             tempHead -= h;
-                        } else break;
+                        } else {
+                            break;
+                        }
                     }
                     headIndx = nextIdx;
                     nextIdx += h;
