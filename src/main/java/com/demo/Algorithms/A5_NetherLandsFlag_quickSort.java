@@ -28,7 +28,9 @@ public class A5_NetherLandsFlag_quickSort extends A0_SortCompare{
      * @param R 数组右边界index
      */
     public static void qiuckSort(int[] arr , int L, int R){
-        if (arr == null || arr.length < 2 || L >= R || R <= 0) return;/*递归出口L >= R 或者 R<=0*/
+        if (arr == null || arr.length < 2 || L >= R || R <= 0){
+            return;/*递归出口L >= R 或者 R<=0*/
+        }
 
 //        swap(arr, (int)(L+(R-L+1)*Math.random()), R);/*加上这句就是随机快排*/
         int num = arr[R];

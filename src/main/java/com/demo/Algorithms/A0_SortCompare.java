@@ -6,6 +6,12 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Demo class
+ *
+ * @author zhouj
+ * @date 2018/10/31
+ */
 public class A0_SortCompare {
     public static void main(String[] args) {
         Map<String, String> nonParaMap = new HashMap<>();
@@ -23,7 +29,7 @@ public class A0_SortCompare {
 
         int[] arr = A0_SortCompare.generateArrary(100, 200000);
         int L = 0;
-        int R = arr.length -1;
+        int R = arr.length - 1;
 
         for (Map.Entry<String, String> etry : nonParaMap.entrySet()) {
             int[] clone = arr.clone();
@@ -32,14 +38,14 @@ public class A0_SortCompare {
 
         for (Map.Entry<String, String> etry : paraMap.entrySet()) {
             int[] clone = arr.clone();
-            if (etry.getKey().equals("heapSort")){
+            if (etry.getKey().equals("heapSort")) {
                 heapSortTimeCast(arr, etry.getValue(), etry.getKey());
-            }else countTimeCastWithPara(clone, etry.getValue(), etry.getKey(), L, R);
+            } else countTimeCastWithPara(clone, etry.getValue(), etry.getKey(), L, R);
         }
 
     }
 
-    private static void countTimeCast(int[] arr, String classA, String sortMethod){
+    private static void countTimeCast(int[] arr, String classA, String sortMethod) {
         try {
             Class<?> clazz = Class.forName(classA);
             Object clazzObject = clazz.newInstance();
@@ -49,7 +55,7 @@ public class A0_SortCompare {
             long millis = System.currentTimeMillis();
             method.invoke(clazzObject, arr);
             long millis2 = System.currentTimeMillis();
-            System.out.println(method.getName() + " : "+ (millis2 - millis));
+            System.out.println(method.getName() + " : " + (millis2 - millis));
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         } catch (InstantiationException e) {
@@ -63,7 +69,7 @@ public class A0_SortCompare {
         }
     }
 
-    private static void countTimeCastWithPara(int[] arr, String classA, String sortMethod, int L, int R){
+    private static void countTimeCastWithPara(int[] arr, String classA, String sortMethod, int L, int R) {
         try {
             Class<?> clazz = Class.forName(classA);
             Object clazzObject = clazz.newInstance();
@@ -73,7 +79,7 @@ public class A0_SortCompare {
             long millis = System.currentTimeMillis();
             method.invoke(clazzObject, arr, L, R);
             long millis2 = System.currentTimeMillis();
-            System.out.println(method.getName() + ":"+ (millis2 - millis));
+            System.out.println(method.getName() + ":" + (millis2 - millis));
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         } catch (InstantiationException e) {
@@ -87,7 +93,7 @@ public class A0_SortCompare {
         }
     }
 
-    private static void heapSortTimeCast(int[] arr, String classA, String sortMethod){
+    private static void heapSortTimeCast(int[] arr, String classA, String sortMethod) {
         try {
             Class<?> clazz = Class.forName(classA);
             Object clazzObject = clazz.newInstance();
@@ -99,7 +105,7 @@ public class A0_SortCompare {
             heapInsert.invoke(clazzObject, arr);
             method.invoke(clazzObject, arr, arr.length);
             long millis2 = System.currentTimeMillis();
-            System.out.println(method.getName() + ":"+ (millis2 - millis));
+            System.out.println(method.getName() + ":" + (millis2 - millis));
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         } catch (InstantiationException e) {
@@ -115,61 +121,67 @@ public class A0_SortCompare {
 
     /**
      * 产生一个元素值为0~value，长度为0~length的随机数组
-     * @param value 数组值
+     *
+     * @param value  数组值
      * @param length 数组长度
      * @return
      */
-    public static int[] generateRandomArray(int value, int length){
-        int len = (int)((length+1) * Math.random());/*0~length的随机整数*/
-        return  generateArrary(value, len);
+    public static int[] generateRandomArray(int value, int length) {
+        int len = (int) ((length + 1) * Math.random());/*0~length的随机整数*/
+        return generateArrary(value, len);
     }
 
     /**
      * 产生一个元素值为0~value，长度为length的随机数组
+     *
      * @param value
      * @param length
      * @return
      */
-    public static int[] generateArrary(int value, int length){
+    public static int[] generateArrary(int value, int length) {
         int[] arr = new int[length];
         for (int i = 0; i < arr.length; i++) {
-            arr[i] = (int)((value+1) * Math.random() - value * Math.random());
+            arr[i] = (int) ((value + 1) * Math.random() - value * Math.random());
         }
         return arr;
     }
 
-    public static void printArr(int[] arr){
+    public static void printArr(int[] arr) {
         for (int i = 0; i < arr.length; i++) {
             if (i == arr.length - 1)
-                System.out.println("idx" + i + " : "+arr[i] + " ,");
+                System.out.println("idx" + i + " : " + arr[i] + " ,");
             else
-                System.out.print("idx" + i + " : "+arr[i] + " ,");
+                System.out.print("idx" + i + " : " + arr[i] + " ,");
         }
     }
 
     /**
      * 交换数组元素位置
+     *
      * @param i
      * @param j
      * @param arr
      * @return true
      */
-    public static boolean swap(int i, int j, int[] arr){
+    public static boolean swap(int i, int j, int[] arr) {
         int tep = arr[i];
         arr[i] = arr[j];
         arr[j] = tep;
         return true;
     }
 
-    public static void correctMethod(int[] arr){
+    public static void correctMethod(int[] arr) {
         Arrays.sort(arr);
     }
 
-    public static boolean isEqualArr(int[] arr1, int[] arr2){
-        if (arr1 == null) return true;
+    public static boolean isEqualArr(int[] arr1, int[] arr2) {
+        if (arr1 == null) {
+            return true;
+        }
         for (int i = 0; i < arr1.length; i++) {
-            if (arr1[i] != arr2[i])
+            if (arr1[i] != arr2[i]) {
                 return false;
+            }
         }
         return true;
     }
