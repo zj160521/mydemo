@@ -6,25 +6,27 @@ package com.demo.algorithms;
  */
 public class A7_Median {
     public static void main(String[] args) {
-        int[] arr = {5,2};
+        int[] arr = {5, 2};
         getMedian(arr);
     }
 
-    public static void getMedian (int[] arr) {
-        if (arr == null || arr.length == 0) return;
+    public static void getMedian(int[] arr) {
+        if (arr == null || arr.length == 0) {
+            return;
+        }
         if (arr.length == 1) {
             System.out.println(arr[0]);
             return;
         }
         if (arr.length == 2) {
-            System.out.println((arr[0] + arr[1])/2);
+            System.out.println((arr[0] + arr[1]) / 2);
             return;
         }
-        int[] bigHeap = new int[arr.length/2 + 1];
-        int[] littleHeap = new int[arr.length/2 + 1];
+        int[] bigHeap = new int[arr.length / 2 + 1];
+        int[] littleHeap = new int[arr.length / 2 + 1];
         int bigIndex = 0;
         int littleIndex = 0;
-        for(int i = 0; i < arr.length; i++) {
+        for (int i = 0; i < arr.length; i++) {
             int num = arr[i];
             if (bigIndex == 0 && littleIndex == 0) {
                 bigHeap[bigIndex++] = num;
