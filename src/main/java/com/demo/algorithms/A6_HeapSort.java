@@ -1,4 +1,4 @@
-package com.demo.Algorithms;
+package com.demo.algorithms;
 
 public class A6_HeapSort extends A0_SortCompare{
     /**

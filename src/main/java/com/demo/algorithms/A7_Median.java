@@ -1,4 +1,4 @@
-package com.demo.Algorithms;
+package com.demo.algorithms;
 
 /**
  * 如果流持续向你发送数据，求当时的中位数(中位数：奇数个取中间那个，偶数个去中间两个的平均值)

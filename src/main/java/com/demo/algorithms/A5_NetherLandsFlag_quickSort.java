@@ -1,4 +1,4 @@
-package com.demo.Algorithms;
+package com.demo.algorithms;
 
 /**
  * 经典快排：一个数组将小于等于最后一个元素数的放左边，比这个数大的元素放数组右边（每次只解决了最后那一个数的位置）

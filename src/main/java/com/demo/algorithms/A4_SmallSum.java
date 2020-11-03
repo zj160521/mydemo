@@ -1,4 +1,4 @@
-package com.demo.Algorithms;
+package com.demo.algorithms;
 
 /**
  * 小和：一个数组中每一个数左边比当前数小的数的总和

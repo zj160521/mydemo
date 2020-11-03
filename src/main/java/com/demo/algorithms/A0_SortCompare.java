@@ -1,4 +1,4 @@
-package com.demo.Algorithms;
+package com.demo.algorithms;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;

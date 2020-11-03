@@ -1,4 +1,4 @@
-package com.demo.Algorithms;
+package com.demo.algorithms;
 
 /**
  * 递归函数实际就是系统栈的执行过程：

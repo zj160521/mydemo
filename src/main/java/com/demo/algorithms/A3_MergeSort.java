@@ -1,4 +1,4 @@
-package com.demo.Algorithms;
+package com.demo.algorithms;
 
 /**
  * 归并排序：采用递归将数据分成树状结构数据，从最底层数据开始逐级对根节点进行排序，采用了中间变量数组arrTemp来存放每次比较好的顺序元素
