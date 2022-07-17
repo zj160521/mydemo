@@ -7,6 +7,7 @@ public class A13_GetMinValueOfStack {
     public static class MinStack {
         private static Stack<Integer> stack;
         private static Stack<Integer> minStack;
+
         public MinStack() {
             stack = new Stack();
             minStack = new Stack();
@@ -37,11 +38,11 @@ public class A13_GetMinValueOfStack {
     }
 
     public static void main(String[] args) {
-        int[] arr = {5,2,4,8,6,1};
+        int[] arr = {5, 2, 4, 8, 6, 1};
         MinStack ms = new MinStack();
         for (int i = 0; i < arr.length; i++) {
             ms.push(arr[i]);
-            System.out.println(ms.peek()+"==="+ms.getMin());
+            System.out.println(ms.peek() + "===" + ms.getMin());
         }
     }
 }

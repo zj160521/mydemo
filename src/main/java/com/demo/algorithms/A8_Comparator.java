@@ -12,7 +12,7 @@ public class A8_Comparator {
                 new Student.Builder().age(20).name("third").id(2).build()
         };
         Arrays.sort(list, new IdAscendingComparator());
-        for (int i = 0; i < list.length; i++){
+        for (int i = 0; i < list.length; i++) {
             System.out.println(list[i].toString());
         }
     }
@@ -31,7 +31,7 @@ class Student {
     private String name;
     private int age;
 
-    private Student (Builder b) {
+    private Student(Builder b) {
         this.id = b.id;
         this.name = b.name;
         this.age = b.age;
@@ -42,23 +42,23 @@ class Student {
         private String name;
         private int age;
 
-        public Builder id (int id) {
+        public Builder id(int id) {
             this.id = id;
-            return  this;
+            return this;
         }
 
-        public Builder name (String name) {
+        public Builder name(String name) {
             this.name = name;
             return this;
         }
 
-        public Builder age (int age) {
+        public Builder age(int age) {
             this.age = age;
-            return  this;
+            return this;
         }
 
-        public Student build () {
-            return  new Student(this);
+        public Student build() {
+            return new Student(this);
         }
     }
 
@@ -76,6 +76,6 @@ class Student {
 
     @Override
     public String toString() {
-        return "id: " + this.id + "  name: "+this.name + "  age: " + this.age;
+        return "id: " + this.id + "  name: " + this.name + "  age: " + this.age;
     }
 }

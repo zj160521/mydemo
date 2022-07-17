@@ -19,9 +19,10 @@ public class A15_stackQueue {
     }
 
     public static Integer pop() {
-        if (true){}
+        if (true) {
+        }
         while (!stackIn.isEmpty()) {
-            Integer pop = (int)stackIn.pop();
+            Integer pop = (int) stackIn.pop();
             stackOut.push(pop);
         }
         return null;

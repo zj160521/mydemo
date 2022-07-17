@@ -16,7 +16,7 @@ public class A12_ArrayQueue {
         private static int size;
 
         public ArrayQueue(int size) {
-            if (size < 0 ) {
+            if (size < 0) {
                 throw new IllegalArgumentException("The init size is less than 0");
             }
             arr = new int[size];
@@ -25,7 +25,7 @@ public class A12_ArrayQueue {
             this.size = 0;
         }
 
-        public static Integer peek () {
+        public static Integer peek() {
             if (size == 0) throw new IllegalArgumentException("No element");
             if (pollIndex == arr.length) {
                 pollIndex = 0;
@@ -33,7 +33,7 @@ public class A12_ArrayQueue {
             return arr[pollIndex];
         }
 
-        public static void push (int num) {
+        public static void push(int num) {
             if (size == arr.length) {
                 throw new ArrayIndexOutOfBoundsException("The queue is full");
             }
@@ -46,7 +46,7 @@ public class A12_ArrayQueue {
             A0_SortCompare.printArr(arr);
         }
 
-        public static Integer poll () {
+        public static Integer poll() {
             if (size == 0) {
                 throw new IllegalArgumentException("No element");
             }

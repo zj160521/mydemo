@@ -1,6 +1,6 @@
 package com.demo.license;
 
-import com.demo.AES2.AESUtil;
+import com.demo.aes2.AESUtil;
 
 import java.util.Date;
 

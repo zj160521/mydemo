@@ -25,6 +25,7 @@ public class ServerMQTT {
 
     /**
      * 构造函数
+     *
      * @throws MqttException
      */
     public ServerMQTT() throws MqttException {
@@ -34,7 +35,7 @@ public class ServerMQTT {
     }
 
     /**
-     *  用来连接服务器
+     * 用来连接服务器
      */
     private void connect() {
         MqttConnectOptions options = new MqttConnectOptions();
@@ -55,13 +56,12 @@ public class ServerMQTT {
     }
 
     /**
-     *
      * @param topic
      * @param message
      * @throws MqttPersistenceException
      * @throws MqttException
      */
-    public void publish(MqttTopic topic , MqttMessage message) throws MqttPersistenceException, MqttException {
+    public void publish(MqttTopic topic, MqttMessage message) throws MqttPersistenceException, MqttException {
         MqttDeliveryToken token = topic.publish(message);
         token.waitForCompletion();
         System.out.println("message is published completely! "
@@ -69,7 +69,8 @@ public class ServerMQTT {
     }
 
     /**
-     *  启动入口
+     * 启动入口
+     *
      * @param args
      * @throws MqttException
      */
@@ -79,7 +80,7 @@ public class ServerMQTT {
         server.message.setQos(2);
         server.message.setRetained(true);
         server.message.setPayload("hello,topic11".getBytes());
-        server.publish(server.mqttTopic , server.message);
+        server.publish(server.mqttTopic, server.message);
         System.out.println(server.message.isRetained() + "------ratained状态");
     }
 }

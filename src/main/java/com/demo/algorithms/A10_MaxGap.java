@@ -24,7 +24,7 @@ public class A10_MaxGap {
 //        System.out.println(integer);
     }
 
-    public static Integer maxGap (int[] arr) {
+    public static Integer maxGap(int[] arr) {
         if (arr == null || arr.length <= 1) return 0;
         int len = arr.length;
         Integer min = null;
@@ -68,11 +68,11 @@ public class A10_MaxGap {
     }
 
     //求num属于哪个桶
-    public static int bucket (int min, int max, int len, int num) {
+    public static int bucket(int min, int max, int len, int num) {
         return ((num - min) * (len + 1) / (max - min + 1));
     }
 
-    public static Integer correctMethod (int[] arr) {
+    public static Integer correctMethod(int[] arr) {
         if (arr == null || arr.length <= 1) return 0;
         Arrays.sort(arr);
         Integer pre = arr[0];

@@ -1,7 +1,7 @@
 package com.demo.algorithms;
 
 
-public class A1_BaseSort extends A0_SortCompare{
+public class A1_BaseSort extends A0_SortCompare {
     public static void main(String[] args) {
         /*对数器：
         1、产生随机数组
@@ -18,8 +18,8 @@ public class A1_BaseSort extends A0_SortCompare{
 //            insertionSort(randomArray);
             shellSort2(randomArray);
             correctMethod(clone);
-            boolean equals = isEqualArr(randomArray,clone);
-            if (!equals){
+            boolean equals = isEqualArr(randomArray, clone);
+            if (!equals) {
                 flag = false;
                 printArr(clone1);
                 break;
@@ -33,17 +33,18 @@ public class A1_BaseSort extends A0_SortCompare{
      * 稳定性：稳定
      * 缺点：与选择排序相比同为O(N*N)的排序，进行了太多次的元素交换操作
      * 时间复杂度O(N*N)
+     *
      * @param arr 数组
      */
     public static void bubbleSort(int[] arr) {
-        if (arr == null || arr.length < 2){
+        if (arr == null || arr.length < 2) {
             return;
         }
 
         for (int i = arr.length - 1; i > 0; i--) {
             for (int j = 0; j < i; j++) {
-                if(arr[j] > arr[j+1]){
-                    swap(j,j+1,arr);
+                if (arr[j] > arr[j + 1]) {
+                    swap(j, j + 1, arr);
                 }
             }
         }
@@ -55,42 +56,44 @@ public class A1_BaseSort extends A0_SortCompare{
      * 优点：与冒泡排序相比少了交换元素的操作
      * 缺点：与选择排序相比，它一定要将两两比较进行到底，比较次数太多
      * 时间复杂度O(N*N)
+     *
      * @param arr
      */
     public static void selectionSort(int[] arr) {
-        if (arr == null || arr.length < 2){
+        if (arr == null || arr.length < 2) {
             return;
         }
 
-        for (int i = arr.length -1; i > 0; i--) {
+        for (int i = arr.length - 1; i > 0; i--) {
             int maxIndex = i;
             for (int j = 0; j < i; j++) {
                 maxIndex = arr[j] >= arr[maxIndex] ? j : maxIndex;
             }
 
-            swap(i,maxIndex,arr);
+            swap(i, maxIndex, arr);
         }
     }
 
     /**
      * 插入排序：从index = 1开始，每次加入一个数与前一个数去比较；大于等于前一个数break，
-     *          否则小于前一个数就交换，一直到比较到数组第一个数或者break
+     * 否则小于前一个数就交换，一直到比较到数组第一个数或者break
      * 稳定性：稳定
      * 优点：与选择排序相比少了很多比较
      * 时间复杂度，最好O(N),最差O(N*N),这种按最差情况算，所以这也是O(N*N)的排序法
      * 在比较对象个数少于60个时采用插入排序，而不采用快排、归并等排序
+     *
      * @param arr
      */
     public static void insertionSort(int[] arr) {
-        if (arr == null || arr.length < 2){
+        if (arr == null || arr.length < 2) {
             return;
         }
 
         for (int i = 1; i < arr.length; i++) {
             for (int j = i; j > 0; j--) {
-                if (arr[j] < arr[j-1]){
-                    swap(j,j-1,arr);
-                }else{
+                if (arr[j] < arr[j - 1]) {
+                    swap(j, j - 1, arr);
+                } else {
                     break;
                 }
             }
@@ -102,10 +105,11 @@ public class A1_BaseSort extends A0_SortCompare{
      * 例如12个元素的数组：
      * 1.将len定为4（12/4=3组），那么下标：0,4,8,为一组，1，5，9为一组，2，6，10为一组，3,7,11为一组进行插入排序
      * 2.再将len定位3,2直到1进行插入排序
+     *
      * @param arr
      */
     public static void shellSort(int[] arr) {
-        if (arr == null || arr.length < 2){
+        if (arr == null || arr.length < 2) {
             return;
         }
         int maxIndex = arr.length - 1;
