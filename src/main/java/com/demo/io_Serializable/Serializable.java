@@ -16,9 +16,9 @@ import java.text.MessageFormat;
  * 二、通过实现Serializable接口进行的序列化，被transient修饰的字段不能序列化
  * 
  * 三、序列化实质上也是加密的一种应用，防止数据在传输过程中被串改
- * 
- *  sr com.demo.Io_Serializable.Person?GV"? I ageL namet Ljava/lang/String;xp   t gacl（这是对象写进文件的内容）
- * com.demo.Io_Serializable.Person：表明反序列化接收对象
+ *
+ * 四、如果不指定serialVersionUID，那么可能会导致
+ *
  * serialVersionUID 相当于算法密钥，进行内容解密，然后进行对象赋值
  */
 public class Serializable {
