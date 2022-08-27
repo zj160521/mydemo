@@ -51,6 +51,7 @@ public class Person implements Cloneable {
     }
 
     //实现Cloneable的clone方法，将clone定义为public
+    @Override
     public Person clone() throws CloneNotSupportedException {
         return (Person) super.clone();
     }
