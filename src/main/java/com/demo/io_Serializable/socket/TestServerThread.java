@@ -1,4 +1,4 @@
-package com.demo.socket;
+package com.demo.io_Serializable.socket;
 
 import java.io.IOException;
 import java.io.InputStream;

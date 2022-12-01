@@ -1,8 +1,7 @@
-package com.demo.socket;
+package com.demo.io_Serializable.socket;
 
 import java.io.*;
 import java.net.Socket;
-import java.net.UnknownHostException;
 
 public class TestSocketClient {
 
